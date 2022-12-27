@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<title>Simple Clicker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<style>
+.button {
+  background-color: #4CAF50;
+  border: 2px solid #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #FFFFFF;
+  color: black;
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.1);
+}
+
+#right {padding-right : 0px; float:right;}
+</style>
+</head>
+
+    <button id="Main" class="button" type="button" onclick="increment()">Click to gain 1 cash!</button>
+    <p id="right" style="font-family: Arial">Locked until 100 cash!</p>
+    <p id="Cash" style="font-family: Arial">You currently have: $0</p>
+    
+    
+<script>
+var cash = 0
+var cpc = 1
+function increment() {
+    cash += 1
+    document.getElementById("Cash").innerHTML = "You currently have: $" + cash;
+    document.getElementById("Main").innerHTML = "Click to gain " + cpc + " cash!";
+}
+</script>
+</html>
